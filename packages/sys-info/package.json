@@ -3,9 +3,26 @@
     "version": "2026.07.28",
     "description": "System information: CPU model/cores/load, memory usage, disk usage, top processes, and system uptime.",
     "author": "Buffy Community",
-    "sha256": "cc70e7fed51e866ce665753bbca63544b76888860d8305a0e41cd083e5e74ac3",
-    "tags": ["system", "monitoring", "admin", "linux"],
-    "commands": ["sys-cpu", "sys-memory", "sys-disk", "sys-processes", "sys-uptime"],
+    "sha256": {
+        "sys-cpu.bsl": "7906e5c83552abf21112fc5fa476e3a866f4e7bfa3682ebca5e2f61c8a229ecc",
+        "sys-disk.bsl": "fda7f8c7b65218a48b2ea61b74ca0ed9858b523d82ebc2ffc917f4782b423214",
+        "sys-memory.bsl": "788e1b2136140f7a1728ce207268f114d4ad242287138c1673231ab2816e6df6",
+        "sys-processes.bsl": "0de00b3d9c157934f4718becc1b9ce163505a5fc178e0021a23d0b88e8979a0a",
+        "sys-uptime.bsl": "7d7da26feee613700b3f50776ee747922df68147585853ab50d8c31bed7e9237"
+    },
+    "tags": [
+        "system",
+        "monitoring",
+        "admin",
+        "linux"
+    ],
+    "commands": [
+        "sys-cpu",
+        "sys-memory",
+        "sys-disk",
+        "sys-processes",
+        "sys-uptime"
+    ],
     "dependencies": {
         "system": [],
         "packages": []

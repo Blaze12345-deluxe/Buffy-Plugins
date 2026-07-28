@@ -3,11 +3,31 @@
     "version": "2026.07.28",
     "description": "Node.js/npm utilities: version check, outdated check, update all, clean reinstall, and node_modules removal.",
     "author": "Buffy Community",
-    "sha256": "fd2eda3f986377cf930ee32a7c5387f201bf4e36ef350267c4c38f2023d98b5f",
-    "tags": ["node", "npm", "javascript", "development"],
-    "commands": ["node-version", "npm-check", "npm-update", "npm-reinstall", "npm-clean"],
+    "sha256": {
+        "node-version.bsl": "ed8de7080c943276dfc5330591fa34f0cbd47d386e68424e795f95be8c1a55af",
+        "npm-check.bsl": "697c3f87938562fb58ac02a052316b8ff2b4bedb67d010c0fab132fcbcc1136e",
+        "npm-clean.bsl": "1030d15912bac0004b00c773307fe0cc79bf0dde7f4a4213db0dee6a9ee9bdf1",
+        "npm-reinstall.bsl": "2bcd919d554dad571202a5b7f797f908ee9650ab6822af80a9eb4a9eac0c1795",
+        "npm-update.bsl": "895ff552f26a9acbaf94247d9788fe2902b0832441ef6015a42aad2e5b505932"
+    },
+    "tags": [
+        "node",
+        "npm",
+        "javascript",
+        "development"
+    ],
+    "commands": [
+        "node-version",
+        "npm-check",
+        "npm-update",
+        "npm-reinstall",
+        "npm-clean"
+    ],
     "dependencies": {
-        "system": ["node", "npm"],
+        "system": [
+            "node",
+            "npm"
+        ],
         "packages": []
     },
     "license": "MIT",

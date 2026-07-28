@@ -129,10 +129,23 @@
                 "packages": []
             },
             "commands": ["shellcheck-run", "bash-check", "perm-fix", "which-all"]
+        },
+        {
+            "name": "file-system",
+            "version": "2026.07.28",
+            "description": "Filesystem navigation utilities: go to parent directory.",
+            "author": "Buffy Community",
+            "path": "packages/file-system",
+            "tags": ["filesystem", "navigation", "utility"],
+            "dependencies": {
+                "system": [],
+                "packages": []
+            },
+            "commands": ["cd-down"]
         }
     ],
     "meta": {
         "updated": "2026-07-28",
-        "package_count": 10
+        "package_count": 11
     }
 }

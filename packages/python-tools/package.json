@@ -3,11 +3,32 @@
     "version": "2026.07.28",
     "description": "Python development utilities: version check, pip freeze, pip install, pip upgrade, and cache cleanup.",
     "author": "Buffy Community",
-    "sha256": "376dbaddddccb86297d1589ebd6c2372365d8d71d19daf6e6b2ea5ec704f0b05",
-    "tags": ["python", "pip", "venv", "development", "cleanup"],
-    "commands": ["python-version", "pip-freeze", "pip-install", "pip-update", "python-clean"],
+    "sha256": {
+        "pip-freeze.bsl": "387bc49ae186a54e633abe42b535c5e226746439b16a6d36994171e759650b21",
+        "pip-install.bsl": "3e3e3280a8c176a7c11adb6a74b9cdd78c28b3d9ee3134d5cbdf8a54f68e040b",
+        "pip-update.bsl": "0b9a27c618a68b6c6e5da5189022ac43408c7fd502f50bd420988e9e66af55db",
+        "python-clean.bsl": "50e095ca688d9b283f963db8dcc6a6fc6ea5df9ebccdbd3afec7e264fe0003e5",
+        "python-version.bsl": "e83790b00a7db1ff3f85e8438a64ff6d2838b9c367ac60b77800c2ba3679c8a5"
+    },
+    "tags": [
+        "python",
+        "pip",
+        "venv",
+        "development",
+        "cleanup"
+    ],
+    "commands": [
+        "python-version",
+        "pip-freeze",
+        "pip-install",
+        "pip-update",
+        "python-clean"
+    ],
     "dependencies": {
-        "system": ["python3", "python3-pip"],
+        "system": [
+            "python3",
+            "python3-pip"
+        ],
         "packages": []
     },
     "license": "MIT",

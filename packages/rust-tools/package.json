@@ -3,11 +3,30 @@
     "version": "2026.07.28",
     "description": "Rust/Cargo utilities: version info, update all crates, clean build artifacts, check outdated deps, and sort Cargo.toml.",
     "author": "Buffy Community",
-    "sha256": "3aef0aee77830906559743ad9af331ebd15cc63343d46ec090c24462a748b99d",
-    "tags": ["rust", "cargo", "development"],
-    "commands": ["rust-version", "cargo-update", "cargo-clean", "cargo-outdated", "cargo-sort"],
+    "sha256": {
+        "cargo-clean.bsl": "e9e67f1abef9cdb6ea82484d41f617c9f5c03d9e6daf4da14ab33b4ca3fc64fe",
+        "cargo-outdated.bsl": "66df9924ef1e4f17cde8408bc84419e33f0f2e985b09c167eca7baca70c12117",
+        "cargo-sort.bsl": "241e06ae22ded5e4b9f53c9235f9e4088ab99e21fcc0c62b07ea1068270f11f8",
+        "cargo-update.bsl": "e675d8b999bbfded540f3a711baecfbfbf3dfa187d39bbbfd360feca653d44bf",
+        "rust-version.bsl": "0458866cf0c717b1e3806ad255e667c710e614c7c19607c42207606cd4d1aaf6"
+    },
+    "tags": [
+        "rust",
+        "cargo",
+        "development"
+    ],
+    "commands": [
+        "rust-version",
+        "cargo-update",
+        "cargo-clean",
+        "cargo-outdated",
+        "cargo-sort"
+    ],
     "dependencies": {
-        "system": ["rustc", "cargo"],
+        "system": [
+            "rustc",
+            "cargo"
+        ],
         "packages": []
     },
     "license": "MIT",

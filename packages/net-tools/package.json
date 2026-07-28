@@ -3,11 +3,31 @@
     "version": "2026.07.28",
     "description": "Network diagnostics: ping, listening ports, DNS lookup, traceroute, and HTTP header inspection.",
     "author": "Buffy Community",
-    "sha256": "7c28e21fc0deba165111b07ab9e87e1ba4e94eeacb6f139257591d4045f80746",
-    "tags": ["network", "dns", "diagnostics", "admin", "linux"],
-    "commands": ["net-ping", "net-ports", "net-dns", "net-traceroute", "net-curl"],
+    "sha256": {
+        "net-curl.bsl": "bb0e0d2a3bb84369b09c5f5b05f77cef9279e2ec3c7db050f5520f9fdca30a12",
+        "net-dns.bsl": "e9b51ffe726e2d4265bbef7deb65d14a71090eb6606aa49dea5c23fd3c34f07c",
+        "net-ping.bsl": "9a1223e91c371d7e029a0adaacdaf3837ff31ecd3ed6383396e838c70bdeaa49",
+        "net-ports.bsl": "8a21041b607baf20d9194f01963da3faadcddea25322935995f4b55e170b269b",
+        "net-traceroute.bsl": "634aa645b71600ee2565b12dc4749b4f17dcd06b59dd7c90c8079d3fae6eaa67"
+    },
+    "tags": [
+        "network",
+        "dns",
+        "diagnostics",
+        "admin",
+        "linux"
+    ],
+    "commands": [
+        "net-ping",
+        "net-ports",
+        "net-dns",
+        "net-traceroute",
+        "net-curl"
+    ],
     "dependencies": {
-        "system": ["curl"],
+        "system": [
+            "curl"
+        ],
         "packages": []
     },
     "license": "MIT",

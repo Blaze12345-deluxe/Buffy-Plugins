@@ -1,0 +1,23 @@
+{
+    "name": "file-system",
+    "version": "2026.07.28",
+    "description": "Filesystem navigation utilities: go to parent directory.",
+    "author": "Buffy Community",
+    "sha256": {
+        "cd-down.bsl": "19a35f7ffb10ce7e6be5aa0d0b5c986cd0fc93e3942871272ea85c37fee531f3"
+    },
+    "tags": [
+        "filesystem",
+        "navigation",
+        "utility"
+    ],
+    "commands": [
+        "cd-down"
+    ],
+    "dependencies": {
+        "system": [],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

@@ -3,11 +3,33 @@
     "version": "2026.07.28",
     "description": "Docker Compose utilities: up, down, restart, logs, update (pull + recreate), and system prune.",
     "author": "Buffy Community",
-    "sha256": "ce4578bd929558dbfa17dac1f20f3bc11020703ec8b1d2b477fa8a7fb7ba5696",
-    "tags": ["docker", "compose", "containers", "devops", "cleanup"],
-    "commands": ["docker-up", "docker-down", "docker-restart", "docker-logs", "docker-update", "docker-prune"],
+    "sha256": {
+        "docker-down.bsl": "fb24d33419e031c177fa0a25139f157b60f36f98ae0b901e008d40cd8a8b5ec0",
+        "docker-logs.bsl": "13162f1ec337beb1fdd3aca474574e71fe29567b089385c2d970819021ea280b",
+        "docker-prune.bsl": "87024c5db6a945c9ae771e3b5e64bd6d92b8c5841b30d04ca8be825dfd4fbfca",
+        "docker-restart.bsl": "044e9bd50c9c45db1750ea55f796c18082467b829d89280db5dccde82e3fa038",
+        "docker-up.bsl": "d7b4163c97c2b1f5c86d6386eca111c10fdc4088c5b907c252fb81ed58aa54e2",
+        "docker-update.bsl": "6de66198e069de08388be36ad2df1800062bd04e95c31c9124fbdbc82b1d64a3"
+    },
+    "tags": [
+        "docker",
+        "compose",
+        "containers",
+        "devops",
+        "cleanup"
+    ],
+    "commands": [
+        "docker-up",
+        "docker-down",
+        "docker-restart",
+        "docker-logs",
+        "docker-update",
+        "docker-prune"
+    ],
     "dependencies": {
-        "system": ["docker"],
+        "system": [
+            "docker"
+        ],
         "packages": []
     },
     "license": "MIT",

@@ -3,11 +3,28 @@
     "version": "2026.07.28",
     "description": "Shell scripting tools: shellcheck linting, bash syntax validation, fix permissions, and which-all tool checker.",
     "author": "Buffy Community",
-    "sha256": "1c3e7bfe29c3d94e432d49548d582252ada3e878a0fafa8a15b974ae66ce6968",
-    "tags": ["shell", "bash", "linting", "development"],
-    "commands": ["shellcheck-run", "bash-check", "perm-fix", "which-all"],
+    "sha256": {
+        "bash-check.bsl": "059580c3499a58df69d8494881ce1b1a205672c28178e044b5f80a9a42f7f94b",
+        "perm-fix.bsl": "1f7cd6a4a99c96ef7319971a070efc856b8d43cae32be24a3da1369924da0eda",
+        "shellcheck-run.bsl": "2581a11733dbe082e5e749e3f5ed31aa7faf8cb8fbcff313c5bc73db285278d9",
+        "which-all.bsl": "d2d4fef2eb7f3f721b583c0bb56fc2a1bc93ba19877535843a7d70ae663f0155"
+    },
+    "tags": [
+        "shell",
+        "bash",
+        "linting",
+        "development"
+    ],
+    "commands": [
+        "shellcheck-run",
+        "bash-check",
+        "perm-fix",
+        "which-all"
+    ],
     "dependencies": {
-        "system": ["bash"],
+        "system": [
+            "bash"
+        ],
         "packages": []
     },
     "license": "MIT",

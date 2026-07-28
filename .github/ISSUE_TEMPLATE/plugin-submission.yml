@@ -20,6 +20,15 @@ body:
       required: true
 
   - type: input
+    id: plugin-author
+    attributes:
+      label: "Author"
+      description: "Your name or organization (appears in `buffy --info`)"
+      placeholder: "e.g., Your Name"
+    validations:
+      required: true
+
+  - type: input
     id: plugin-version
     attributes:
       label: "Version"
@@ -49,6 +58,15 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: plugin-sha
+    attributes:
+      label: "SHA-256 Hash"
+      description: "The combined SHA-256 hash of all .bsl files (matches `package.json` and `{name}-SHA.txt`)"
+      placeholder: "e.g., 9d43263efb0bc913c84b371ba8c541965c706c77756db42ec2ff8507a867fd05"
+    validations:
+      required: true
+
   - type: textarea
     id: plugin-dependencies
     attributes:
@@ -69,7 +87,7 @@ body:
     validations:
       required: false
 
-  - type: textarea
+  - type: input
     id: plugin-tags
     attributes:
       label: "Tags"
@@ -91,7 +109,7 @@ body:
     id: plugin-files
     attributes:
       label: "Package Contents"
-      description: "List the files in your package directory (including BSL scripts, assets, etc.)"
+      description: "List the files in your package directory"
       placeholder: |
         packages/my-tools/
         ├── package.json
@@ -101,27 +119,32 @@ body:
     validations:
       required: true
 
-  - type: textarea
+  - type: checkboxes
     id: plugin-validation
     attributes:
       label: "Validation Checklist"
-      description: "Confirm that your plugin meets the requirements"
-      value: |
-        - [ ] All `.bsl` files pass `buffy --check`
-        - [ ] `package.json` contains all required fields (name, version, description, author, sha256)
-        - [ ] SHA-256 hash in `package.json` matches `{name}-SHA.txt`
-        - [ ] SHA-256 hash is the combined hash of all `.bsl` files (sorted alphabetically)
-        - [ ] `package.json` uses nested `dependencies.system` and `dependencies.packages` format
-        - [ ] System dependencies are declared for all required tools
-        - [ ] Plugin was tested locally: `buffy --install ./packages/my-tools && buffy my-tools && buffy --verify my-tools && buffy --uninstall my-tools`
-    validations:
-      required: true
+      description: "Confirm that your plugin meets all requirements before submission"
+      options:
+        - label: "All `.bsl` files pass `buffy --check`"
+          required: true
+        - label: "`package.json` contains all required fields (name, version, description, author, sha256)"
+          required: true
+        - label: "SHA-256 hash in `package.json` matches `{name}-SHA.txt`"
+          required: true
+        - label: "SHA-256 hash is the combined hash of all `.bsl` files (sorted alphabetically)"
+          required: true
+        - label: "`package.json` uses nested `dependencies.system` and `dependencies.packages` format"
+          required: true
+        - label: "System dependencies are declared for all required tools"
+          required: true
+        - label: "Plugin was tested locally: `buffy --install ./packages/my-tools && buffy my-tools && buffy --verify my-tools && buffy --uninstall my-tools`"
+          required: true
 
   - type: textarea
     id: additional-info
     attributes:
       label: "Additional Information"
-      description: "Any other context, screenshots, or notes for the reviewer"
+      description: "Any other context or notes for the reviewer"
       placeholder: "..."
     validations:
       required: false

@@ -4,6 +4,4 @@ DESCRIPTION = "Changes to the parent directory"
 
 OUTPUT = false
 
-WRITE "Going down to parent directory..."
 RUN "cd .."
-WRITE "Changed directory."

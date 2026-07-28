@@ -1,0 +1,15 @@
+{
+    "name": "go-tools",
+    "version": "2026.07.28",
+    "description": "Go development utilities: version check, clean build cache, tidy modules, test with coverage, and format source files.",
+    "author": "Buffy Community",
+    "sha256": "f6c5c174450d65df7ac8bb708d34fd9086f4dd35b64ef8db787d0c50e3ef225f",
+    "tags": ["go", "golang", "development"],
+    "commands": ["go-version", "go-clean", "go-mod-tidy", "go-test-cover", "go-fmt"],
+    "dependencies": {
+        "system": ["go"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "git-flow",
+    "version": "2026.07.28",
+    "description": "Git workflow shortcuts: branch create/delete, stash list, squash merge, tagging, and amend last commit.",
+    "author": "Buffy Community",
+    "sha256": "9d43263efb0bc913c84b371ba8c541965c706c77756db42ec2ff8507a867fd05",
+    "tags": ["git", "version-control", "devops", "workflow"],
+    "commands": ["git-branch-create", "git-branch-delete", "git-stash-list", "git-merge-squash", "git-tag", "git-amend"],
+    "dependencies": {
+        "system": ["git"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

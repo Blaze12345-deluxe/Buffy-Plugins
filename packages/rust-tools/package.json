@@ -1,0 +1,15 @@
+{
+    "name": "rust-tools",
+    "version": "2026.07.28",
+    "description": "Rust/Cargo utilities: version info, update all crates, clean build artifacts, check outdated deps, and sort Cargo.toml.",
+    "author": "Buffy Community",
+    "sha256": "3aef0aee77830906559743ad9af331ebd15cc63343d46ec090c24462a748b99d",
+    "tags": ["rust", "cargo", "development"],
+    "commands": ["rust-version", "cargo-update", "cargo-clean", "cargo-outdated", "cargo-sort"],
+    "dependencies": {
+        "system": ["rustc", "cargo"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

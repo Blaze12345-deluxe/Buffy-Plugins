@@ -1,0 +1,15 @@
+{
+    "name": "sys-service",
+    "version": "2026.07.28",
+    "description": "Systemd service management: status, restart, enable, logs, and list running services.",
+    "author": "Buffy Community",
+    "sha256": "b2aeb1c336d29cde9e290c0b41346ce9770c89ff1039eabee7f735d6226b40ae",
+    "tags": ["system", "service", "systemd", "admin", "linux"],
+    "commands": ["service-status", "service-restart", "service-enable", "service-logs", "service-list"],
+    "dependencies": {
+        "system": ["systemctl"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

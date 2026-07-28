@@ -1,0 +1,15 @@
+{
+    "name": "shell-tools",
+    "version": "2026.07.28",
+    "description": "Shell scripting tools: shellcheck linting, bash syntax validation, fix permissions, and which-all tool checker.",
+    "author": "Buffy Community",
+    "sha256": "1c3e7bfe29c3d94e432d49548d582252ada3e878a0fafa8a15b974ae66ce6968",
+    "tags": ["shell", "bash", "linting", "development"],
+    "commands": ["shellcheck-run", "bash-check", "perm-fix", "which-all"],
+    "dependencies": {
+        "system": ["bash"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

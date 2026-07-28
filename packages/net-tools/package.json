@@ -1,0 +1,15 @@
+{
+    "name": "net-tools",
+    "version": "2026.07.28",
+    "description": "Network diagnostics: ping, listening ports, DNS lookup, traceroute, and HTTP header inspection.",
+    "author": "Buffy Community",
+    "sha256": "7c28e21fc0deba165111b07ab9e87e1ba4e94eeacb6f139257591d4045f80746",
+    "tags": ["network", "dns", "diagnostics", "admin", "linux"],
+    "commands": ["net-ping", "net-ports", "net-dns", "net-traceroute", "net-curl"],
+    "dependencies": {
+        "system": ["curl"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

@@ -25,10 +25,114 @@
                 "packages": []
             },
             "commands": ["docker-up", "docker-down", "docker-restart", "docker-logs", "docker-update", "docker-prune"]
+        },
+        {
+            "name": "git-flow",
+            "version": "2026.07.28",
+            "description": "Git workflow shortcuts: branch create/delete, stash list, squash merge, tagging, and amend last commit.",
+            "author": "Buffy Community",
+            "path": "packages/git-flow",
+            "tags": ["git", "version-control", "devops", "workflow"],
+            "dependencies": {
+                "system": ["git"],
+                "packages": []
+            },
+            "commands": ["git-branch-create", "git-branch-delete", "git-stash-list", "git-merge-squash", "git-tag", "git-amend"]
+        },
+        {
+            "name": "sys-info",
+            "version": "2026.07.28",
+            "description": "System information: CPU model/cores/load, memory usage, disk usage, top processes, and system uptime.",
+            "author": "Buffy Community",
+            "path": "packages/sys-info",
+            "tags": ["system", "monitoring", "admin", "linux"],
+            "dependencies": {
+                "system": [],
+                "packages": []
+            },
+            "commands": ["sys-cpu", "sys-memory", "sys-disk", "sys-processes", "sys-uptime"]
+        },
+        {
+            "name": "sys-service",
+            "version": "2026.07.28",
+            "description": "Systemd service management: status, restart, enable, logs, and list running services.",
+            "author": "Buffy Community",
+            "path": "packages/sys-service",
+            "tags": ["system", "service", "systemd", "admin", "linux"],
+            "dependencies": {
+                "system": ["systemctl"],
+                "packages": []
+            },
+            "commands": ["service-status", "service-restart", "service-enable", "service-logs", "service-list"]
+        },
+        {
+            "name": "net-tools",
+            "version": "2026.07.28",
+            "description": "Network diagnostics: ping, listening ports, DNS lookup, traceroute, and HTTP header inspection.",
+            "author": "Buffy Community",
+            "path": "packages/net-tools",
+            "tags": ["network", "dns", "diagnostics", "admin", "linux"],
+            "dependencies": {
+                "system": ["curl"],
+                "packages": []
+            },
+            "commands": ["net-ping", "net-ports", "net-dns", "net-traceroute", "net-curl"]
+        },
+        {
+            "name": "node-tools",
+            "version": "2026.07.28",
+            "description": "Node.js/npm utilities: version check, outdated check, update all, clean reinstall, and node_modules removal.",
+            "author": "Buffy Community",
+            "path": "packages/node-tools",
+            "tags": ["node", "npm", "javascript", "development"],
+            "dependencies": {
+                "system": ["node", "npm"],
+                "packages": []
+            },
+            "commands": ["node-version", "npm-check", "npm-update", "npm-reinstall", "npm-clean"]
+        },
+        {
+            "name": "rust-tools",
+            "version": "2026.07.28",
+            "description": "Rust/Cargo utilities: version info, update all crates, clean build artifacts, check outdated deps, and sort Cargo.toml.",
+            "author": "Buffy Community",
+            "path": "packages/rust-tools",
+            "tags": ["rust", "cargo", "development"],
+            "dependencies": {
+                "system": ["rustc", "cargo"],
+                "packages": []
+            },
+            "commands": ["rust-version", "cargo-update", "cargo-clean", "cargo-outdated", "cargo-sort"]
+        },
+        {
+            "name": "go-tools",
+            "version": "2026.07.28",
+            "description": "Go development utilities: version check, clean build cache, tidy modules, test with coverage, and format source files.",
+            "author": "Buffy Community",
+            "path": "packages/go-tools",
+            "tags": ["go", "golang", "development"],
+            "dependencies": {
+                "system": ["go"],
+                "packages": []
+            },
+            "commands": ["go-version", "go-clean", "go-mod-tidy", "go-test-cover", "go-fmt"]
+        },
+        {
+            "name": "shell-tools",
+            "version": "2026.07.28",
+            "description": "Shell scripting tools: shellcheck linting, bash syntax validation, fix permissions, and which-all tool checker.",
+            "author": "Buffy Community",
+            "path": "packages/shell-tools",
+            "tags": ["shell", "bash", "linting", "development"],
+            "dependencies": {
+                "system": ["bash"],
+                "packages": []
+            },
+            "commands": ["shellcheck-run", "bash-check", "perm-fix", "which-all"]
         }
     ],
     "meta": {
         "updated": "2026-07-28",
-        "package_count": 2
+        "package_count": 10
     }
 }

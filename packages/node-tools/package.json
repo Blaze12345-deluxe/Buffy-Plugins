@@ -1,0 +1,15 @@
+{
+    "name": "node-tools",
+    "version": "2026.07.28",
+    "description": "Node.js/npm utilities: version check, outdated check, update all, clean reinstall, and node_modules removal.",
+    "author": "Buffy Community",
+    "sha256": "fd2eda3f986377cf930ee32a7c5387f201bf4e36ef350267c4c38f2023d98b5f",
+    "tags": ["node", "npm", "javascript", "development"],
+    "commands": ["node-version", "npm-check", "npm-update", "npm-reinstall", "npm-clean"],
+    "dependencies": {
+        "system": ["node", "npm"],
+        "packages": []
+    },
+    "license": "MIT",
+    "min_buffy_version": "0.1.0"
+}

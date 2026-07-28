@@ -1,0 +1,127 @@
+name: "📦 Plugin Submission"
+description: "Submit a new plugin to the Buffy-Plugins repository"
+title: "Plugin: [plugin-name]"
+labels: ["plugin", "new"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing a plugin! Please fill out the details below.
+        Make sure you've read the [Contributing Guide](../#creating-your-own-plugin) before submitting.
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: "Plugin Name"
+      description: "The name of your plugin (e.g., `my-tools`)"
+      placeholder: "e.g., my-tools"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: "Version"
+      description: "Date-based version (YYYY.MM.DD format)"
+      placeholder: "2026.07.28"
+    validations:
+      required: true
+
+  - type: textarea
+    id: plugin-description
+    attributes:
+      label: "Description"
+      description: "A short description of what your plugin does (shown in `buffy --info`)"
+      placeholder: "A collection of utilities for managing..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: plugin-commands
+    attributes:
+      label: "Commands"
+      description: "List all commands your plugin provides"
+      placeholder: |
+        - my-tools
+        - my-tools subcommand
+        - my-tools another-command
+    validations:
+      required: true
+
+  - type: textarea
+    id: plugin-dependencies
+    attributes:
+      label: "System Dependencies"
+      description: "What system tools are required? (e.g., git, docker, python3)"
+      placeholder: |
+        - git
+        - curl
+    validations:
+      required: false
+
+  - type: textarea
+    id: plugin-bsl-dependencies
+    attributes:
+      label: "BSL Dependencies"
+      description: "What other BSL plugins does this depend on?"
+      placeholder: "None"
+    validations:
+      required: false
+
+  - type: textarea
+    id: plugin-tags
+    attributes:
+      label: "Tags"
+      description: "Comma-separated tags for discoverability"
+      placeholder: "git, devops, workflow"
+    validations:
+      required: false
+
+  - type: input
+    id: plugin-license
+    attributes:
+      label: "License"
+      description: "SPDX license identifier"
+      placeholder: "MIT"
+    validations:
+      required: false
+
+  - type: textarea
+    id: plugin-files
+    attributes:
+      label: "Package Contents"
+      description: "List the files in your package directory (including BSL scripts, assets, etc.)"
+      placeholder: |
+        packages/my-tools/
+        ├── package.json
+        ├── my-tools-SHA.txt
+        ├── my-tools.bsl
+        └── README.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: plugin-validation
+    attributes:
+      label: "Validation Checklist"
+      description: "Confirm that your plugin meets the requirements"
+      value: |
+        - [ ] All `.bsl` files pass `buffy --check`
+        - [ ] `package.json` contains all required fields (name, version, description, author, sha256)
+        - [ ] SHA-256 hash in `package.json` matches `{name}-SHA.txt`
+        - [ ] SHA-256 hash is the combined hash of all `.bsl` files (sorted alphabetically)
+        - [ ] `package.json` uses nested `dependencies.system` and `dependencies.packages` format
+        - [ ] System dependencies are declared for all required tools
+        - [ ] Plugin was tested locally: `buffy --install ./packages/my-tools && buffy my-tools && buffy --verify my-tools && buffy --uninstall my-tools`
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: "Additional Information"
+      description: "Any other context, screenshots, or notes for the reviewer"
+      placeholder: "..."
+    validations:
+      required: false

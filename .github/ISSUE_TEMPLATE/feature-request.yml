@@ -1,0 +1,68 @@
+name: "💡 Feature Request"
+description: "Suggest a new plugin or an enhancement to an existing one"
+title: "Feature: [short description]"
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for a new plugin or an improvement? Let us know!
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: "Request Type"
+      options:
+        - "New plugin"
+        - "Enhancement to existing plugin"
+        - "Improvement to repository tooling"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: "Plugin Name (if applicable)"
+      description: "Which plugin does this relate to?"
+      placeholder: "e.g., git-flow"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Describe your idea in detail"
+      placeholder: "I'd like a plugin that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: commands
+    attributes:
+      label: "Suggested Commands"
+      description: "What commands should the plugin provide?"
+      placeholder: |
+        - buffy my-tool do-thing
+        - buffy my-tool do-other-thing
+    validations:
+      required: false
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: "Use Case"
+      description: "What problem would this solve? Who would use it?"
+      placeholder: "This would help developers who..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Any other references, examples from other tools, or notes"
+      placeholder: "..."
+    validations:
+      required: false

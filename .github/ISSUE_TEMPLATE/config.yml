@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "📖 Plugin Guide"
+    url: https://github.com/Blaze12345-deluxe/Buffy-Plugins#creating-your-own-plugin
+    about: "Learn how to create and package BSL plugins before submitting"
+  - name: "💬 Discussions"
+    url: https://github.com/Blaze12345-deluxe/BuffyCLI/discussions
+    about: "Ask questions and discuss ideas with the community"

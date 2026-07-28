@@ -1,0 +1,88 @@
+name: "🐛 Bug Report"
+description: "Report a problem with an existing plugin"
+title: "Bug: [short description]"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please provide as much detail as possible.
+
+  - type: input
+    id: plugin-name
+    attributes:
+      label: "Affected Plugin"
+      description: "Which plugin has the issue?"
+      placeholder: "e.g., python-tools"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: "Plugin Version"
+      description: "The version listed in `buffy --info <plugin>`"
+      placeholder: "2026.07.28"
+    validations:
+      required: true
+
+  - type: input
+    id: buffy-version
+    attributes:
+      label: "Buffy Version"
+      description: "Run `buffy --version` to check"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: "Operating System"
+      placeholder: "e.g., Ubuntu 24.04, macOS 14.5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "What happened?"
+      description: "Describe the issue in detail"
+      placeholder: "When I run `buffy python-version`, it shows..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected behavior"
+      description: "What should have happened instead?"
+      placeholder: "It should display the Python version..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Steps to reproduce"
+      description: "How can we reproduce this?"
+      placeholder: |
+        1. Install the plugin: `buffy --install python-tools`
+        2. Run: `buffy python-version`
+        3. See error: ...
+      value: |
+        1. Install the plugin: `buffy --install [plugin-name]`
+        2. Run: `buffy [command]`
+        3. See error:
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Relevant logs or output"
+      description: "Paste any error messages, command output, or `buffy --doctor` results"
+      render: shell
+    validations:
+      required: false

@@ -2,11 +2,32 @@
 
 A community repository of installable [Buffy CLI](https://github.com/Blaze12345-deluxe/BuffyCLI) plugins.
 
+> **Tip:** Buffy v0.1.2+ ships with `pip-env` pre-installed. Try `buffy pip-env` immediately after installation — no explicit install needed.
+
+---
+
+## Documentation
+
+The [Buffy CLI repository](https://github.com/Blaze12345-deluxe/BuffyCLI) includes comprehensive plain-text documentation in its `docs/` folder:
+
+| File | Covers |
+|------|--------|
+| [`INSTALLATION.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/INSTALLATION.txt) | Installing from source, cargo, or binary |
+| [`COMMANDS.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/COMMANDS.txt) | All CLI flags, repo management, aliases, examples |
+| [`SCRIPT_LANGUAGE.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/SCRIPT_LANGUAGE.txt) | Complete BSL syntax, variables, best practices |
+| [`CONFIGURATION.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/CONFIGURATION.txt) | ~/.buffy/ layout, package.json format, SHA files |
+| [`TROUBLESHOOTING.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/TROUBLESHOOTING.txt) | Common problems and diagnostics |
+| [`DEVELOPMENT.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/DEVELOPMENT.txt) | Building, testing, and contributing to Buffy itself |
+
+For a quick start with plugins, continue below.
+
+---
+
 ## Quick Start
 
 ```bash
-# Add this repository to Buffy
-buffy --repo add https://github.com/Blaze12345-deluxe/Buffy-Plugins
+# Add this repository to Buffy (shorthand without 'add')
+buffy --repo https://github.com/Blaze12345-deluxe/Buffy-Plugins
 
 # Refresh the package index
 buffy --repo refresh
@@ -57,7 +78,7 @@ Docker Compose workflow utilities — 6 commands:
 
 ### Prerequisites
 
-You need [Buffy CLI](https://github.com/Blaze12345-deluxe/BuffyCLI) installed:
+You need [Buffy CLI](https://github.com/Blaze12345-deluxe/BuffyCLI) installed. See the [INSTALLATION.txt](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/INSTALLATION.txt) guide for details:
 
 ```bash
 git clone https://github.com/Blaze12345-deluxe/BuffyCLI.git
@@ -69,7 +90,7 @@ sudo cp target/release/buffy /usr/local/bin/
 ### Add the Repository
 
 ```bash
-buffy --repo add https://github.com/Blaze12345-deluxe/Buffy-Plugins
+buffy --repo https://github.com/Blaze12345-deluxe/Buffy-Plugins
 ```
 
 ### Install a Plugin
@@ -114,6 +135,8 @@ Every Buffy plugin is a directory containing:
 - **`{name}-SHA.txt`** — SHA-256 checksum (required)
 - **`*.bsl`** — One or more BSL script files (required)
 - **`README.md`** — Documentation (recommended)
+
+> **Scaffolding tool:** Use the [template/.compile.py](https://github.com/Blaze12345-deluxe/Buffy-AI-Script-Maker/tree/master/template) interactive scaffolder to generate your plugin directory, `.bsl` files, SHA checksums, and `index.json` automatically.
 
 ### Plugin Structure
 
@@ -165,6 +188,8 @@ EXIT
 | `${DATE}` | Current date (YYYY-MM-DD) |
 | `${TIME}` | Current time (HH:MM:SS) |
 | `${1}`–`${N}` | Script arguments |
+
+> For a complete BSL reference — including variable resolution order, error handling, runtime OUTPUT toggling, command resolution priorities, and best practices — see the [SCRIPT_LANGUAGE.txt](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/SCRIPT_LANGUAGE.txt) guide.
 
 ### Package Manifest (package.json)
 
@@ -306,6 +331,18 @@ To contribute a plugin to this repository:
 
 4. **Update `meta.package_count`** in `index.json` to reflect the new count
 5. **Submit a Pull Request**
+
+---
+
+## Learn More & Resources
+
+| Resource | Link |
+|----------|------|
+| Buffy CLI source + docs | [github.com/Blaze12345-deluxe/BuffyCLI](https://github.com/Blaze12345-deluxe/BuffyCLI) |
+| Buffy CLI documentation (docs/) | [`docs/README.txt`](https://github.com/Blaze12345-deluxe/BuffyCLI/blob/master/docs/README.txt) (index of all files) |
+| Plugin scaffold generator | [Buffy-AI-Script-Maker template/](https://github.com/Blaze12345-deluxe/Buffy-AI-Script-Maker/tree/master/template) |
+| AI-powered BSL script generator | [Buffy-AI-Script-Maker](https://github.com/Blaze12345-deluxe/Buffy-AI-Script-Maker) |
+| Official releases | [github.com/Blaze12345-deluxe/BuffyCLI/releases](https://github.com/Blaze12345-deluxe/BuffyCLI/releases) |
 
 ---
 
